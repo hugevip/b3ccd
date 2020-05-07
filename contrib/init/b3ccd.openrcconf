@@ -1,0 +1,33 @@
+# /etc/conf.d/b3ccd: config file for /etc/init.d/b3ccd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/b3cc/bitcoin.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/b3ccd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/b3ccd.pid"
+
+# Where to write b3ccd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/b3ccd"
+
+# User and group to own b3ccd process
+#BITCOIND_USER="b3cc"
+#BITCOIND_GROUP="b3cc"
+
+# Path to b3ccd executable
+#BITCOIND_BIN="/usr/bin/b3ccd"
+
+# Nice value to run b3ccd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+#BITCOIND_OPTS=""
+
+# The timeout in seconds OpenRC will wait for b3ccd to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+BITCOIND_SIGTERM_TIMEOUT=60

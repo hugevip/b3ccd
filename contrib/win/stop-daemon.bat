@@ -1,0 +1,3 @@
+@ECHO OFF
+TITLE [B3CC] Shutting down Daemon Process...
+b3cc-cli.exe stop
